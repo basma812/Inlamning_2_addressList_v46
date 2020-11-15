@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.IO;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq;
 
 namespace Inlamning_2_addressList_v46
 {
@@ -149,7 +147,7 @@ namespace Inlamning_2_addressList_v46
             // List<Person> Dict = new List<Person>();
             using (StreamWriter sr1 = new StreamWriter(fileStream))
             {
-                
+
                 for (int i = 0; i < Dict.Count(); i++)
                 {
                     // sr1.WriteLine("{0},{1},{2},{3}", Dict[i].name, Dict[i].address, Dict[i].telephone, Dict[i].email);
