@@ -1,0 +1,7 @@
+C:\Users\basma\source\repos\Inlamning_2_addressList_v462\Inlamning_2_addressList_v46\bin\Debug\Inlamning_2_addressList_v46.exe.config
+C:\Users\basma\source\repos\Inlamning_2_addressList_v462\Inlamning_2_addressList_v46\bin\Debug\Inlamning_2_addressList_v46.exe
+C:\Users\basma\source\repos\Inlamning_2_addressList_v462\Inlamning_2_addressList_v46\bin\Debug\Inlamning_2_addressList_v46.pdb
+C:\Users\basma\source\repos\Inlamning_2_addressList_v462\Inlamning_2_addressList_v46\obj\Debug\Inlamning_2_addressList_v46.csprojAssemblyReference.cache
+C:\Users\basma\source\repos\Inlamning_2_addressList_v462\Inlamning_2_addressList_v46\obj\Debug\Inlamning_2_addressList_v46.csproj.CoreCompileInputs.cache
+C:\Users\basma\source\repos\Inlamning_2_addressList_v462\Inlamning_2_addressList_v46\obj\Debug\Inlamning_2_addressList_v46.exe
+C:\Users\basma\source\repos\Inlamning_2_addressList_v462\Inlamning_2_addressList_v46\obj\Debug\Inlamning_2_addressList_v46.pdb

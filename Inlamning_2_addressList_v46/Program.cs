@@ -5,6 +5,8 @@ using System.Linq;
 
 namespace Inlamning_2_addressList_v46
 {
+    /* CLASS: Person
+    * PURPOSE: a person entry in the address list*/
     class Person
     {
         public string name, address, telephone, email;
@@ -12,6 +14,9 @@ namespace Inlamning_2_addressList_v46
         {
             name = N; address = A; telephone = T; email = E;
         }
+        /* METHOD: Person (public structor)
+        * PURPOSE: user enter the input of name, address, telphone number and email.
+        PARAMETERS: None */
         public Person()
         {
             Console.WriteLine("Adds new person");
@@ -24,27 +29,24 @@ namespace Inlamning_2_addressList_v46
             Console.Write("  4. enter email:   ");
             email = Console.ReadLine();
         }
+        /* METHOD: PrintPerson
+        * PURPOSE: write a the person's entred info to the address list file
+        * PARAMETERS: None
+        * RETURN VALUE: void */
         public string PrintPerson()
         {
             return $"{name},{address},{telephone},{email}";
-        }
-        public void Print(StreamWriter sw)
-        {
-            // sw.WriteLine("{0},{1},{2},{3}", name, address, telephone, email);
-
-            sw.WriteLine(PrintPerson());
-        }
+        } 
     }
+    /* CLASS: Program
+   * PURPOSE: program commands made to reach the file in List<Person> Dict and make changes*/
     class Program
     {
         static void Main(string[] args)
         {
             List<Person> Dict = new List<Person>();
-            string fileStream = @"C:\Users\basma\address.lis";
-
             Console.Write("Loading address list ... ");
             Load(Dict);
-
             Console.WriteLine("Hello and welcome to the address list");
             Console.WriteLine("Type 'quit' to quit!");
             string command;
@@ -82,8 +84,8 @@ namespace Inlamning_2_addressList_v46
                 {
                     for (int i = 0; i < Dict.Count(); i++)
                     {
-                        Person P = Dict[i];
-                        Console.WriteLine("{0}, {1}, {2}, {3}", P.name, P.address, P.telephone, P.email);
+                        Dict[i].PrintPerson();
+                        //Console.WriteLine("{0}, {1}, {2}, {3}", P.name, P.address, P.telephone, P.email);
                     }
                 }
                 else if (command == "change")
@@ -115,17 +117,18 @@ namespace Inlamning_2_addressList_v46
                         }
                     }
                 }
-                else if (command == "print")
-                {
-                    Console.WriteLine(Dict.PrintPerson());
-                }
                 else
                 {
                     Console.WriteLine("Unknown command: {0}", command);
                 }
             } while (command != "quit");
         }
-
+        /* METHOD: Load (static path)
+         * PURPOSE: To find and read a path file. 
+         * The file lines of will be read as a text and split by #.
+         * Each split creates a line of info for one person in List<Person> Dict
+         * PARAMETERS: List<Person> Dict to add new created objects
+         * RETURN VALUE: None*/
         private static void Load(List<Person> Dict)
         {
             using (StreamReader fileStream = new StreamReader(@"C:\Users\basma\address.lis"))
@@ -140,23 +143,7 @@ namespace Inlamning_2_addressList_v46
                     Dict.Add(P);
                 }
             }
-            Console.WriteLine("Done!"); //List<Person> Dict = new List<Person>();
-        }
-        private static List<Person> MoveAddressList(string fileStream, List<Person> Dict)
-        {
-            // List<Person> Dict = new List<Person>();
-            using (StreamWriter sr1 = new StreamWriter(fileStream))
-            {
-
-                for (int i = 0; i < Dict.Count(); i++)
-                {
-                    // sr1.WriteLine("{0},{1},{2},{3}", Dict[i].name, Dict[i].address, Dict[i].telephone, Dict[i].email);
-                    fileStream[i].Print(sr1);
-                }
-
-            }
-            return Dict;
-
-        }
+            Console.WriteLine("Done!");
+        }    
     }
 }
