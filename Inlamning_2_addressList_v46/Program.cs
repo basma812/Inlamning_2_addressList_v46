@@ -30,7 +30,7 @@ namespace Inlamning_2_addressList_v46
             email = Console.ReadLine();
         }
         /* METHOD: PrintPerson
-        * PURPOSE: write a the person's entred info to the address list file
+        * PURPOSE: write the person's entred info to the address list file
         * PARAMETERS: None
         * RETURN VALUE: void */
         public string PrintPerson()
@@ -39,7 +39,7 @@ namespace Inlamning_2_addressList_v46
         } 
     }
     /* CLASS: Program
-   * PURPOSE: program commands made to reach the file in List<Person> Dict and make changes*/
+   * PURPOSE: program commands made to reach the file with List<Person> Dict and make changes to the path*/
     class Program
     {
         static void Main(string[] args)
